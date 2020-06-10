@@ -1,8 +1,9 @@
-cfile = hello.c input.c print.c changeValueViaPoint.c array.c helloWorld.c
 cc = gcc
+CFLAGS = -I h/
+RESOURCE = resource/*.c hello.c
 hello:
-	$(cc) $(cfile) -o $(@).out
+	$(cc) $(CFLAGS) $(RESOURCE) -o $(@).out
+	 
+	
 clean:
 	rm -rf *.out
-arrayLength:
-	$(cc) arrayLength.c -o $(@).out
