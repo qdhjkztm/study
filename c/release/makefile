@@ -1,6 +1,6 @@
 CC = gcc
 TARGET = main
-OBJ = resource/print.o hello.o
+OBJ = resource/print.o resource/sort.o hello.o
 CFLAGS = -I h
 RM = rm -f
 $(TARGET):$(OBJ)
