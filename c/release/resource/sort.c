@@ -25,5 +25,17 @@ void select_sort(int array[],int len){
 		array[i]=temp;
 	}
 }
-				
-	
+void insert_sort(int array[] ,int len){
+	int i,j,k;
+	for(i=0;i<len;i++){
+		j=i-1;
+		while(j>=0){
+			if(array[j]>array[j+1]){
+				k=array[j+1];
+				array[j+1]=array[j];
+				array[j]=k;
+			}
+			j--;
+		}
+	}
+}	
