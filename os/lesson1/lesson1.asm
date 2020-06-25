@@ -1,14 +1,17 @@
-SECTION .data
-msg db 'hello world',0Ah
-SECTION .text
-global _start
-_start:
-	mov edx,13
-	mov ecx,msg
-	mov ebx,1
-	mov eax,4
-	int 80h
+section .data
+msg:
+    db "hello, world", 10
+len equ $-msg
 
-	mov ebx,0
-	mov eax,1
-	int 80h
+section .text
+global main
+main:
+    mov edx, len
+    mov ecx, msg
+    mov ebx, 1
+    mov eax, 4 ;直接使用sys_write系统调用
+    int 0x80
+
+    mov ebx, 0
+    mov eax, 1
+    int 0x80

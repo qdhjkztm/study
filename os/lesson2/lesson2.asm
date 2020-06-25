@@ -1,10 +1,14 @@
 SECTION .data
-msg db 'hello world',0Ah
+msg db 7
 SECTION .text
 global _start
 _start:
 	mov edx,13
-	mov ecx,msg
+	mov ecx,15
+	mov eax,msg
+     s: add eax,5
+	loop s
+	mov ecx,eax
 	mov ebx,1
 	mov eax,4
 	int 80h

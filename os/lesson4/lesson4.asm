@@ -16,7 +16,6 @@ _start:
 	mov eax,1
 	int 80h
 strlen:
-	push ebx
 	mov  ebx,eax
 nextchar:
 	cmp byte[eax],0
@@ -25,5 +24,4 @@ nextchar:
 	jmp nextchar
 finished:
 	sub eax,ebx
-	pop ebx
 	ret
