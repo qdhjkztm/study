@@ -1,8 +1,8 @@
 SECTION .data
 msg db 'hello world,your are good',0Ah
 SECTION .text
-global _start
-_start:
+global main
+main:
 	mov ebx,msg
 	mov eax,ebx
 nextchar:

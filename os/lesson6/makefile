@@ -1,9 +1,9 @@
-OBJ = lesson3.o
+OBJ = lesson6.o
 TARGET=main
 RM = rm -f
 $(TARGET):$(OBJ)
-	gcc -g -o $@ $<
+	ld -m elf_i386 $< -o $@
 $(OBJ):%.o:%.asm
-	nasm -f elf64 -g $<
+	nasm -f elf -g $<
 clean:
 	rm -f $(TARGET) *.o
