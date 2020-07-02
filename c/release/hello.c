@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include "print.h"
 #include "sort.h"
+#include "math_tools.h"
 int main(){
+	struct test_struct{int x,y;} common;
+	common.x=5;
+	common.y=6;
+	printf("common value is x %d,y %d",common.x,common.y);
 	int i=110;
 	printInt(i);
 	char str[]="hello";
@@ -9,6 +14,8 @@ int main(){
 	print_bubble_sort();	
 	print_select_sort();
 	print_insert_sort();
+	add(100,120);
+	two_n(3);
 }
 print_array(int array[],int len){
 	int i;
