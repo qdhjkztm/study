@@ -55,7 +55,7 @@ VRAM	EQU		0x0ff8			; 图像缓冲区的起始地址
 
 ; 保护模式转换
 
-[INSTRSET "i486p"]				; 说明使用486指令
+;[INSTRSET "i486p"]				; 说明使用486指令
 
 		LGDT	[GDTR0]			; 设置临时GDT
 		MOV		EAX,CR0
