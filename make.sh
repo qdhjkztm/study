@@ -1,20 +1,21 @@
 #!/bin/bash
-rootPath=/usr/local/study/c
+rootPath=/usr/local/study
+outputFilePath=/usr/local/output
 if [ $1 == "c" ] ;then
         echo "进入c文件夹"
-        cd $rootPath/release/
+        cd $rootPath/c/release/
         echo "清除可能存在的编译"
         make clean
         echo "开始编译"
         make
         echo "结束编译"
         echo "进入编译后的文件夹"
-        cd /usr/local/output/c
+        cd $outputFilePath/c
         echo "开始执行"
         ./main
 elif [ $1 == "h" ] ;then
         echo "进入汇编文件夹"
-        cd /usr/local/study/huibian
+        cd $rootPath/huibian
         for dir in `ls`
         do
                 if [ $dir == $2 ] ; then
@@ -29,12 +30,12 @@ elif [ $1 == "h" ] ;then
         done
 
         echo "进入编译后的文件夹"
-        cd /usr/local/output/huibian
+        cd $outputFilePath/huibian
         echo "开始执行"
         ./main
 elif [ $1 == "o" ] ;then
         echo "进入os文件夹"
-        cd /usr/local/study/os
+        cd $rootPath/os
         for dir in `ls`
         do
                 if [ $dir == $2 ];then
