@@ -1,7 +1,8 @@
 #!/bin/bash
+rootPath=/usr/local/study/c
 if [ $1 == "c" ] ;then
         echo "进入c文件夹"
-        cd /usr/local/study/c/release/
+        cd $rootPath/release/
         echo "清除可能存在的编译"
         make clean
         echo "开始编译"
