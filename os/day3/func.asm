@@ -1,7 +1,7 @@
 ; naskfunc
 ; TAB=4
 
-format "WCOFF"			; 制作目标文件的模式	
+[FORMAT "WCOFF"]				; 制作目标文件的模式	
 [BITS 32]						; 制作32位模式用的机器语言
 
 
