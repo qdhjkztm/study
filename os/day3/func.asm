@@ -7,7 +7,7 @@
 
 ; 制作目标文件的信息
 
-[FILE "naskfunc.nas"]			; 源文件名信息
+[FILE "func.asm"]			; 源文件名信息
 
 		GLOBAL	_io_hlt			; 程序中包含的函数名
 
