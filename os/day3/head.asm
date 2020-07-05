@@ -131,9 +131,9 @@ memcpy:
 		RET
 ; memcpy地址前缀大小
 
-		ALIGNB	16
+		ALIGN	16, DB 0
 GDT0:
-		RESB	8				; 初始值
+		ALIGN	8, DB 0				; 初始值
 		DW		0xffff,0x0000,0x9200,0x00cf	; 写32bit位段寄存器
 		DW		0xffff,0x0000,0x9a28,0x0047	; 可执行的文件的32bit寄存器（bootpack用）
 
@@ -142,5 +142,5 @@ GDTR0:
 		DW		8*3-1
 		DD		GDT0
 
-		ALIGNB	16
+		ALIGN	16, DB 0
 bootpack:
