@@ -26,7 +26,7 @@ CYLS	EQU		10				; 声明CYLS=10
 		DD		0xffffffff		; （可能是）卷标号码
 		DB		"HARIBOTEOS "	; 磁盘的名称（必须为11字?，不足填空格）
 		DB		"FAT12   "		; 磁盘格式名称（必??8字?，不足填空格）
-		RESB	18				; 先空出18字节
+		TIMES	18 DB 0				; 先空出18字节
 
 ; 程序主体
 
