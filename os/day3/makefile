@@ -4,5 +4,5 @@ buildBin:
 buildImg:
 	dd conv=sync if=$(outputFilePath)hello.bin of=$(outputFilePath)hello.img bs=1440k count=1
 clean:
-	rm -rf *.bin *.img
+	rm -rf $(outputFilePath)*.bin $(outputFilePath)*.img
 	
