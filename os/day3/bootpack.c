@@ -5,7 +5,7 @@ void io_hlt(void);
 /* 是函数声明却不用{}，而用;，这表示的意思是：
 	函数在别的文件中，你自己找一下 */
 
-void HariMain(void)
+void main(void)
 {
 
 fin:
