@@ -143,4 +143,4 @@ GDTR0:
 		DD		GDT0
 
 		ALIGN	16, DB 0
-bootpack:
+start:
