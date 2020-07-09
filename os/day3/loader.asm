@@ -73,7 +73,7 @@ pipelineflush:
 
 ; bootpack传递
 
-		MOV		ESI,bootpack	; 源
+		MOV		ESI,start	; 源
 		MOV		EDI,BOTPAK		; 目标
 		MOV		ECX,512*1024/4
 		CALL	memcpy
