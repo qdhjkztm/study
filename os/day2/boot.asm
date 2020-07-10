@@ -3,17 +3,19 @@
 	mov	ax, cs
 	mov	ds, ax
 	mov	es, ax
-	call	DispStr			; 调用显示字符串例程
+	call	printStr			; 调用显示字符串例程
 	jmp	$			; 无限循环
-DispStr:
+printStr:
 	mov	bx, msg
 	mov	bp, bx
+	call strlen
+strlen:
 	mov ax,bx			; ES:BP = 串地址
-lenth:
+calculate:
 	cmp	byte[eax],0
 	jz finished
 	inc ax
-	jmp lenth
+	jmp calculate
 finished:
 	sub ax,bx
 	mov	cx, ax			; CX = 串长度
