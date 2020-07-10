@@ -1,9 +1,10 @@
-OBJ = lesson1.o
-TARGET=main
+outputFilePath=/usr/local/myAll/output/huibian/
+OBJ = $(outputFilePath)lesson1.o
+TARGET=$(outputFilePath)main
 RM = rm -f
 $(TARGET):$(OBJ)
 	gcc -g -o $@ $<
-$(OBJ):%.o:%.asm
+$(OBJ):$(outputFilePath)%.o:%.asm
 	nasm -f elf64 -g $<
 clean:
 	rm -f $(TARGET) *.o
