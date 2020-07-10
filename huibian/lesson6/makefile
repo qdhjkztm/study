@@ -1,9 +1,10 @@
-OBJ = lesson6.o
-TARGET=main
+outputFilePath=/usr/local/myAll/output/huibian/
+OBJ = $(outputFilePath)lesson6.o
+TARGET=$(outputFilePath)main
 RM = rm -f
 $(TARGET):$(OBJ)
 	ld -m elf_i386 $< -o $@
-$(OBJ):%.o:%.asm
+$(OBJ):$(outputFilePath)%.o:%.asm
 	nasm -f elf -g $<
 clean:
 	rm -f $(TARGET) *.o
