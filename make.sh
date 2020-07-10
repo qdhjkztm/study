@@ -45,8 +45,7 @@ elif [ $1 == "o" ] ;then
                         echo '开始清理'
                         make clean
                         echo '开始编译'
-                        make buildBin
-                        make buildImg
+                        make
                         echo '结束编译'
                 fi
         done
