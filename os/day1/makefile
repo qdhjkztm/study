@@ -1,8 +1,8 @@
 outputFilePath=/usr/local/output/os/
 buildBin:
-	 nasm hello.asm -o $(outputFilePath)hello.bin
+	 nasm boot.asm -o $(outputFilePath)boot.bin
 buildImg:
-	dd conv=sync if=$(outputFilePath)hello.bin of=$(outputFilePath)hello.img bs=1440k count=1
+	dd conv=sync if=$(outputFilePath)boot.bin of=$(outputFilePath)boot.img bs=1440k count=1
 clean:
 	rm -rf *.bin *.img
 	
