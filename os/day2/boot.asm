@@ -10,7 +10,7 @@ DispStr:
 	mov	bp, bx
 	mov ax,bx			; ES:BP = 串地址
 lenth:
-	cmp byte[ax],0
+	cmp	byte[eax],0
 	jz finished
 	inc ax
 	jmp lenth
