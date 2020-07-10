@@ -4,5 +4,5 @@ boot.img:boot.bin
 boot.bin:boot.asm
 	 nasm $< -o $(outputFilePath)$@	
 clean:
-	rm -rf *.bin *.img
+	rm -rf $(outputFilePath).bin $(outputFilePath).img
 	
