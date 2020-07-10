@@ -1,6 +1,6 @@
 #!/bin/bash
-rootPath=/usr/local/study
-outputFilePath=/usr/local/output
+rootPath=/usr/local/myAll/study
+outputFilePath=/usr/local/myAll/output
 if [ $1 == "c" ] ;then
         echo "进入c文件夹"
         cd $rootPath/c/release/
