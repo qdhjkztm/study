@@ -6,6 +6,6 @@
 	call	printStr			; 调用显示字符串例程
 	jmp	$			; 无限循环
 %include 'tools.asm'
-msg:		db	"Hello, OS world! A Good Start"
+msg:		db	"Hello, OS world! Second Good Start"
 times 	510-($-$$)	db	0	; 填充剩下的空间，使生成的二进制代码恰好为512字节
 dw 	0xaa55				; 结束标志
