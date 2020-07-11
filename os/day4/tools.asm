@@ -1,7 +1,7 @@
 printStr:
-	mov	bp, bx
+	mov	bp, bx	; ES:BP = 串地址
 	call strlen
-	
+
 	mov	cx, ax			; CX = 串长度
 	mov	ax, 01301h		; AH = 13,  AL = 01h
 	mov	bx, 000ch		; 页号为0(BH = 0) 黑底红字(BL = 0Ch,高亮)
