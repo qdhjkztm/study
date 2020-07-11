@@ -1,5 +1,4 @@
 printStr:
-	mov	bx, msg
 	mov	bp, bx
 	call strlen
 strlen:

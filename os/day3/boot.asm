@@ -3,6 +3,7 @@
 	mov	ax, cs
 	mov	ds, ax
 	mov	es, ax
+	mov	bx, msg
 	call	printStr			; 调用显示字符串例程
 	jmp	$			; 无限循环
 %include 'tools.asm'
