@@ -1,6 +1,6 @@
 %include 'tools.asm'
 section .data
-msg db 'please enter your name',0h
+msg db 'please enter your name:',0h
 msg2 db 'hello,',0h
 
 section .bbs
@@ -10,7 +10,7 @@ section .text
 global _start
 _start:
 	mov eax,msg
-	call println
+	call print
 
 	mov edx,255
 	mov ecx,sinput 
