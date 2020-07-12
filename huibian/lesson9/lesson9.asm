@@ -19,9 +19,9 @@ _start:
 	int 80h
 
 	mov eax,msg2
-	call println	
+	call print	
 
 	mov eax,sinput
-	call println
+	call print
 
 	call quit
