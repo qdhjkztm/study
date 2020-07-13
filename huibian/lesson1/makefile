@@ -7,4 +7,4 @@ $(TARGET):$(OBJ)
 $(OBJ):$(outputFilePath)%.o:%.asm
 	nasm -f elf -g $< -o $@
 clean:
-	rm -f $(outputFilePath)$(TARGET) $(outputFilePath)*.o 
+	rm -f $(TARGET) $(outputFilePath)*.o 
