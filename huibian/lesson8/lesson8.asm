@@ -6,7 +6,7 @@ section .text
 global _start
 _start:
 	push 	ebx
-	mov 	ebx,10
+	mov 	ebx,msg
 	mov 	eax,ebx
 	pop		ebx
 	call println
