@@ -1,5 +1,5 @@
 outputFilePath=/usr/local/myAll/output/huibian/
-OBJ = $(outputFilePath)lesson9.o
+OBJ = $(outputFilePath)lesson10.o
 TARGET=$(outputFilePath)main
 RM = rm -f
 $(TARGET):$(OBJ)
