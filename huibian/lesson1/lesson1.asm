@@ -9,7 +9,7 @@ main:
     mov edx, len
     mov ecx, msg
     mov ebx, 1
-    mov eax, 4 ;直接使用sys_write系统调用
+    mov eax, 27 ;直接使用sys_write系统调用
     int 0x80
 
     mov ebx, 0
