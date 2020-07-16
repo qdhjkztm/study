@@ -1,4 +1,3 @@
-
 	mov	ax, 07c00h
 	mov	ds, ax
 	mov	es, ax
