@@ -8,6 +8,7 @@
 DispStr:
 	mov	ax, msg
 	mov	bp, ax			; ES:BP = 串地址
+	mov ah, 0x13                          ; ah为0x13,调用13号中断
 	mov	cx, 16			; CX = 串长度
 	mov al, 0                             ; al为0,不移动光标，字符串中没有属性内容
 	mov bh, 0                             ; 第0页显示
