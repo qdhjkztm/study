@@ -9,9 +9,10 @@ DispStr:
 	mov	ax, msg
 	mov	bp, ax			; ES:BP = 串地址
 	mov	cx, 16			; CX = 串长度
-	mov	ax, 01301h		; AH = 13,  AL = 01h
-	mov	bx, 000ch		; 页号为0(BH = 0) 黑底红字(BL = 0Ch,高亮)
-	mov	dl, 1
+	mov al, 0                             ; al为0,不移动光标，字符串中没有属性内容
+	mov bh, 0                             ; 第0页显示
+	mov bl, 0xFC                          ; 闪烁白色背景，红色加亮前景
+	mov	dl, 0
 	int	10h			; 10h 号中断
 	ret
 msg:		db	"Hello, OS world!"
