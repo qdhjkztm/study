@@ -1,5 +1,5 @@
 SECTION .data
-msg db 'hello world,your are good',0Ah
+msg db 'he'
 SECTION .text
 global main
 main:
