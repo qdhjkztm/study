@@ -5,6 +5,8 @@
 	mov	es, ax
 	mov	bx, msg
 	call	printStr			; 调用显示字符串例程
+
+	add bx,30
 	mov	bx, msg2
 	call	printStr			; 调用显示字符串例程
 	jmp	$			; 无限循环
