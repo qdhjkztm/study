@@ -5,6 +5,6 @@ RM = rm -f
 $(TARGET):$(OBJ)
 	ld -m elf_i386 $< -o $@
 $(OBJ):$(outputFilePath)%.o:%.asm
-	nasm -f elf -g $<
+	nasm -f elf -g $< -o $@
 clean:
-	rm -f $(TARGET) *.o
+	rm -f $(TARGET) $(outputFilePath)*.o
