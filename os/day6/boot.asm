@@ -80,9 +80,9 @@ LABEL_SEG_CODE32:
 	mov	ax, SelectorVideo
 	mov	gs, ax			; 视频段选择子(目的)
 
-	mov	edi, (80 * 11 + 79) * 2	; 屏幕第 11 行, 第 79 列。
+	mov	edi, (80 * 11 + 79) * 15	; 屏幕第 11 行, 第 79 列。
 	mov	ah, 0Ch			; 0000: 黑底    1100: 红字
-	mov	al, 'p'
+	mov	al, 'hello'
 	mov	[gs:edi], ax
 
 	; 到此停止
