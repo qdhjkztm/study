@@ -5,12 +5,12 @@
 
 %include	"pm.inc"	; 常量, 宏, 以及一些说明
 
-org	07c00h
+org	0100h
 	jmp	LABEL_BEGIN
 
 [SECTION .gdt]
 ; GDT
-;                              段基址,       段界限     , 属性
+;                              段基址,      段界限     , 属性
 LABEL_GDT:	   Descriptor       0,                0, 0           ; 空描述符
 LABEL_DESC_CODE32: Descriptor       0, SegCode32Len - 1, DA_C + DA_32; 非一致代码段
 LABEL_DESC_VIDEO:  Descriptor 0B8000h,           0ffffh, DA_DRW	     ; 显存首地址
@@ -80,9 +80,9 @@ LABEL_SEG_CODE32:
 	mov	ax, SelectorVideo
 	mov	gs, ax			; 视频段选择子(目的)
 
-	mov	edi, (80 * 11 + 10) * 4	; 屏幕第 11 行, 第 79 列。
+	mov	edi, (80 * 11 + 79) * 2	; 屏幕第 11 行, 第 79 列。
 	mov	ah, 0Ch			; 0000: 黑底    1100: 红字
-	mov	al, 'hello'
+	mov	al, 'P'
 	mov	[gs:edi], ax
 
 	; 到此停止
