@@ -7,7 +7,8 @@ section .text
 global main
 main:
     mov edx, len
-    mov ecx, [0]
+    mov eax,0x100
+    mov ecx, eax
     mov ebx, 1
     mov eax, 4 ;直接使用sys_write系统调用
     int 0x80
