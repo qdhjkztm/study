@@ -7,7 +7,7 @@ section .text
 global main
 main:
     mov edx, len
-    mov ebx,"hello"
+    mov ebx,'hello'
     mov ds,ebx
     mov ecx, [0]
     mov ebx, 1
