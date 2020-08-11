@@ -6,13 +6,13 @@ len equ $-msg
 section .text
 global main
 main:
-    mov edx, len
+    mov rdx, len
     mov rax, 'hello'
-    mov ecx, eax
-    mov ebx, 1
-    mov eax, 4 ;直接使用sys_write系统调用
+    mov rcx, rax
+    mov rbx, 1
+    mov rax, 4 ;直接使用sys_write系统调用
     int 0x80
 
-    mov ebx, 0
-    mov eax, 1
+    mov rbx, 0
+    mov rax, 1
     int 0x80
