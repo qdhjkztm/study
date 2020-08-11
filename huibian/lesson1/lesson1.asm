@@ -7,7 +7,7 @@ section .text
 global main
 main:
     mov edx, len
-    mov word [eax], 5
+    mov eax, 'hello, world'
     mov ecx, eax
     mov ebx, 1
     mov eax, 4 ;直接使用sys_write系统调用
