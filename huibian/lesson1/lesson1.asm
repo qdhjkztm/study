@@ -1,6 +1,6 @@
 section .data
 msg:
-    db 1, 10
+    db "hello,world", 10
 len equ $-msg
 
 section .text
