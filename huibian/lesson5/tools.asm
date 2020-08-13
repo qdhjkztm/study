@@ -1,6 +1,6 @@
 strlen:
 	push ebx
-	mov  ebx,eax	;将msg存入ebx，开始通过eax自增计算msg的长度
+	mov  ebx,[eax]	;将msg存入ebx，开始通过eax自增计算msg的长度
 
 nextchar:
 	cmp  byte[eax],0	;这个以前的文章讲过，gdb调试那一章
