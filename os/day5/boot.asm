@@ -7,8 +7,8 @@
 	call	printStr			; 调用显示字符串例程
 	
 	call	println
-	add ax,100
-	mov es,ax
+	
+	mov es,cs
 	mov	bx, msg2
 	call	printStr			; 调用显示字符串例程
 	jmp	$			; 无限循环
