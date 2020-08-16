@@ -45,3 +45,4 @@ the_secret:
 ; zero padding and magic bios number
 times 510-($-$$) db 0
 dw 0xaa55
+
