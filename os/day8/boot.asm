@@ -1,5 +1,5 @@
 mov ah, 0x0e ; tty mode
-mov al, BootMessage
+mov al, [BootMessage]
 int 0x10
 mov al, 'e'
 int 0x10
