@@ -1,3 +1,4 @@
+org	07c00h
 mov ah, 0x0e ; tty mode
 mov al, [BootMessage]
 int 0x10
