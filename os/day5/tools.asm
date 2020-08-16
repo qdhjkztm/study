@@ -31,7 +31,7 @@ finished:
 	pop bx
 	ret
 
-print_nl:
+println:
     pusha
     
     mov ah, 0x0e
