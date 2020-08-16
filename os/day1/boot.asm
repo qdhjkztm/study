@@ -15,7 +15,7 @@ DispStr:
 	int	10h			; 10h 号中断
 
 	pop ax
-	add ax,20
+	add ax,len_string
 	mov ds,ax
 	mov es,ax
 
