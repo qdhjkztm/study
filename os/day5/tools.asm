@@ -1,7 +1,7 @@
 printStr:
 	
 	mov	bp, bx	; ES:BP = 串地址
-	push ax
+	pusha
 	call strlen
 
 	mov	cx, ax			; CX = 串长度
@@ -9,7 +9,7 @@ printStr:
 	mov	ax, 01301h		; AH = 13,  AL = 01h
 	mov	bx, 000ah		; 页号为0(BH = 0) 黑底红字(BL = 0Ch,高亮)
 	mov	dl, 2
-	pop ax
+	popa
 	int	10h			; 10h 号中断
 
 
