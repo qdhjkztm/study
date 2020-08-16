@@ -5,6 +5,7 @@
 	call	DispStr			; 调用显示字符串例程
 	jmp	$			; 无限循环
 DispStr:
+	push ax
 	mov	ax, BootMessage
 	mov	bp, ax			; ES:BP = 串地址
 	mov	cx, len_string			; CX = 串长度
@@ -12,6 +13,11 @@ DispStr:
 	mov	bx, 000ah		; 页号为0(BH = 0) 黑底红字(BL = 0Ch,高亮)
 	mov	dl, 0
 	int	10h			; 10h 号中断
+	
+	pop ax
+	add ax,20
+	mov ds,ax
+	mov es,ax
 
 	mov	ax, BootMessage2
 	mov	bp, ax			; ES:BP = 串地址
