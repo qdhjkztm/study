@@ -1,7 +1,5 @@
 printStr:
-	mov	ax, cs
-	mov	ds, ax
-	mov	es, ax
+	
 	mov	bp, bx	; ES:BP = 串地址
 	pusha
 	call strlen
