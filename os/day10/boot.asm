@@ -1,12 +1,12 @@
 [org 0x7c00] ; tell the assembler that our offset is bootsector code
 
 ; The main routine makes sure the parameters are ready and then calls the function
-mov bx, HELLO
+mov cx, HELLO
 call print
 
 call print_nl
 
-mov bx, GOODBYE
+mov cx, GOODBYE
 call print
 
 call print_nl

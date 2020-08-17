@@ -6,7 +6,7 @@ print:
 
 ; the comparison for string end (null byte)
 start:
-    mov al, [bx] ; 'bx' is the base address for the string
+    mov al, [cx] ; 'bx' is the base address for the string
     cmp al, 0 
     je done
 
@@ -15,7 +15,7 @@ start:
     int 0x10 ; 'al' already contains the char
 
     ; increment pointer and do next loop
-    add bx, 1
+    add cx, 1
     jmp start
 
 done:
