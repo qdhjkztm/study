@@ -4,11 +4,11 @@
 	mov	ds, ax
 	mov	es, ax
 	mov	bx, msg
-	mov dx,1
+	mov dx,0
 	call	printStr			; 调用显示字符串例程
 	
 	call	println
-	mov dx,2
+	mov dx,1
 	mov	bx, goodby
 	call	printStr			; 调用显示字符串例程
 	jmp	$			; 无限循环
