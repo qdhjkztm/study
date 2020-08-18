@@ -18,12 +18,12 @@ global main
 
 main:
 
-	mov bx, HELLO
+	mov bl, HELLO
 	call print
 
 	call print_nl
 
-	mov bx, GOODBYE
+	mov bl, GOODBYE
 	call print
 
 	call print_nl

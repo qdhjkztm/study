@@ -6,7 +6,7 @@ print:
 
 ; the comparison for string end (null byte)
 start:
-    mov al,byte [bx] ; 'bx' is the base address for the string
+    mov al,byte [bl] ; 'bx' is the base address for the string
     cmp al, 0 
     je done
 
