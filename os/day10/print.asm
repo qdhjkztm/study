@@ -6,8 +6,8 @@ print:
 
 ; the comparison for string end (null byte)
 start:
-    mov al, [bx] ; 'bx' is the base address for the string
-    cmp al, 0 
+    mov ax, [bx] ; 'bx' is the base address for the string
+    cmp ax, 0 
     je done
 
     ; the part where we print with the BIOS help
