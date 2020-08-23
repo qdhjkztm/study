@@ -1,3 +1,4 @@
+[bits 16]
 print:
     pusha
     mov ah, 0x0e
@@ -6,8 +7,8 @@ print:
 
 ; the comparison for string end (null byte)
 start:
-    mov ax, [bx] ; 'bx' is the base address for the string
-    cmp ax, 0 
+    mov al, [bx] ; 'bx' is the base address for the string
+    cmp al, 0 
     je done
 
     ; the part where we print with the BIOS help
