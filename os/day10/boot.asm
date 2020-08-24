@@ -4,12 +4,12 @@
 mov bx, HELLO
 call print
 
-call print_nl
+;call print_nl
 
-mov bx, GOODBYE
-call print
+;mov bx, GOODBYE
+;call print
 
-call print_nl
+;call print_nl
 
 
 ; that's it! we can hang now
