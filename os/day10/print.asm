@@ -7,16 +7,16 @@ print:
 
 ; the comparison for string end (null byte)
 start:
-    mov ax, [bx] ; 'bx' is the base address for the string
-    cmp ax, 0 
+    mov eax, [ebx] ; 'bx' is the base address for the string
+    cmp eax, 0 
     je done
 
     ; the part where we print with the BIOS help
-    mov ax, 0x0e00
+    mov eax, 0x0e00
     int 0x10 ; 'al' already contains the char
 
     ; increment pointer and do next loop
-    add bx, 1
+    add ebx, 1
     jmp start
 
 done:
