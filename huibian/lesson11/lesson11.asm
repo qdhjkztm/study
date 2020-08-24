@@ -19,12 +19,20 @@ global main
 main:
 
 	mov bl, HELLO
-	call print
+	pusha
+start:
+    mov al,[bl] ; 'bx' is the base address for the string
+    cmp al, 0 
+    je done
 
-	call print_nl
+    ; the part where we print with the BIOS help
+    mov ah, 0x0e
+    int 0x10 ; 'al' already contains the char
 
-	mov bl, GOODBYE
-	call print
-
-	call print_nl
+    ; increment pointer and do next loop
+    add bx, 1
+    jmp start
+done:
+	popa
+    ret
 
