@@ -15,10 +15,10 @@ global main
 
 main:
 
-	mov bl, HELLO
+	mov bx, HELLO
 	pusha
 start:
-    mov al,[bl] ; 'bx' is the base address for the string
+    mov al,[bx] ; 'bx' is the base address for the string
     cmp al, 0 
     je done
 
