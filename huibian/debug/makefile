@@ -1,4 +1,4 @@
-outputFilePath=/usr/local/myAll/study/huibian/debug
+outputFilePath=/usr/local/myAll/study/huibian/debug/
 OBJ = $(outputFilePath)lesson1.o
 TARGET=$(outputFilePath)main
 RM = rm -f
