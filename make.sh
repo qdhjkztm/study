@@ -6,12 +6,12 @@ if [ $1 == "c" ] ;then
         cd $rootPath/c/release/
         echo "清除可能存在的编译"
         make clean
-        echo "开始编译"
+        echo "开始编译了"
         make
         echo "结束编译"
         echo "进入编译后的文件夹"
         cd $outputFilePath/c
-        echo "开始执行"
+        echo "开始执行" 
         ./main
 elif [ $1 == "h" ] ;then
         echo "进入汇编文件夹"
