@@ -6,7 +6,7 @@ main:
     mov     ebx,eax
     add     ebx,eax
     add     eax,ebx
-    push    eax
-    pop     eax
+    push    rax
+    pop     rax
     mov     eax,[0]
-    mov     ds,0
+    mov     ds,eax
