@@ -9,4 +9,5 @@ main:
     push    rax
     mov     eax,[0]
     mov     ds,eax
+    inc     eax
     add     eax,eax
