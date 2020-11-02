@@ -7,6 +7,5 @@ main:
     add     ebx,eax
     add     eax,ebx
     push    rax
-    pop     rax
     mov     eax,[0]
     mov     ds,eax
