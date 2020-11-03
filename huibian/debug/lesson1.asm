@@ -3,7 +3,7 @@ section .text
 global main
 main:
     mov     ecx,'aaa'
-    push    rcx
+    push    ecx
     mov     ecx,esp
     mov     edx,3
     mov     eax,4
