@@ -2,7 +2,7 @@ section .data
 section .text
 global main
 main:
-    mov     eax,1000h
+    mov     eax,'aaaaaaaaaaaaaaaaaa'
     mov     ebx,eax
     add     ebx,eax
     add     eax,ebx
