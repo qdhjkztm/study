@@ -2,7 +2,7 @@ section .data
 section .text
 global main
 main:
-    mov     rcx,'aaa'
+    mov     rcx,1234h
     push    rcx
     mov     rcx,rsp
     mov     rdx,3
