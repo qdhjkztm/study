@@ -2,7 +2,7 @@ section .data
 section .text
 global main
 main:
-    mov     rcx,0
+    mov     rcx,1
     mov     rax,rcx
     add     rax,48
     push    rax         ; push the linefeed onto the stack so we can get the address
