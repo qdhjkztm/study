@@ -2,7 +2,7 @@ section .data
 section .text
 global main
 main:
-    mov     rax, 0Ah    ; move 0Ah into rax - 0Ah is the ascii character for a linefeed
+    mov     rax, "aaa"    ; move 0Ah into rax - 0Ah is the ascii character for a linefeed
     push    rax         ; push the linefeed onto the stack so we can get the address
     mov     rax, rsp    ; move the address of the current stack pointer into rax for sprint
     call    sprint
