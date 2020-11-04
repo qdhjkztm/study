@@ -2,14 +2,14 @@ section .data
 section .text
 global main
 main:
-    mov     ecx,'aaa'
-    push    ecx
-    mov     ecx,esp
-    mov     edx,3
-    mov     eax,4
-    mov     ebx,1
+    mov     rcx,'aaa'
+    push    rcx
+    mov     rcx,rsp
+    mov     rdx,3
+    mov     rax,4
+    mov     rbx,1
     int     80h
 
-    mov     ebx, 0      ; return 0 status on exit - 'No Errors'
-    mov     eax, 1      ; invoke SYS_EXIT (kernel opcode 1)
+    mov     rbx, 0      ; return 0 status on exit - 'No Errors'
+    mov     rax, 1      ; invoke SYS_EXIT (kernel opcode 1)
     int     80h
