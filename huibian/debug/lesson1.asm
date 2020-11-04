@@ -2,14 +2,50 @@ section .data
 section .text
 global main
 main:
-    mov     rcx,1234h
+    mov     rax, 0Ah    ; move 0Ah into rax - 0Ah is the ascii character for a linefeed
+    push    rax         ; push the linefeed onto the stack so we can get the address
+    mov     rax, rsp    ; move the address of the current stack pointer into rax for sprint
+    call    sprint
+quit:
+    mov     rbx, 0
+    mov     rax, 1
+    int     80h
+    ret
+slen:
+    push    rbx
+    mov     rbx, rax
+ 
+nextchar:
+    cmp     byte [rax], 0
+    jz      finished
+    inc     rax
+    jmp     nextchar
+ 
+finished:
+    sub     rax, rbx
+    pop     rbx
+    ret
+ 
+ 
+;------------------------------------------
+; void sprint(String message)
+; String printing function
+sprint:
+    push    rdx
     push    rcx
-    mov     rcx,rsp
-    mov     rdx,3
-    mov     rax,4
-    mov     rbx,1
+    push    rbx
+    push    rax
+    call    slen
+ 
+    mov     rdx, rax
+    pop     rax
+ 
+    mov     rcx, rax
+    mov     rbx, 1
+    mov     rax, 4
     int     80h
-
-    mov     rbx, 0      ; return 0 status on exit - 'No Errors'
-    mov     rax, 1      ; invoke SYS_EXIT (kernel opcode 1)
-    int     80h
+ 
+    pop     rbx
+    pop     rcx
+    pop     rdx
+    ret
