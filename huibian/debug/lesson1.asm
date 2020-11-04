@@ -2,7 +2,8 @@ section .data
 section .text
 global main
 main:
-    mov     rax, 1
+    mov     rcx,0
+    mov     rax,rcx
     add     rax,48
     push    rax         ; push the linefeed onto the stack so we can get the address
     mov     rax, rsp    ; move the address of the current stack pointer into rax for sprint
