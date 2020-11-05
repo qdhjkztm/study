@@ -3,9 +3,7 @@ section .text
 global main
  
 main:
- 
- 
-    mov     eax, 'aaa'        ; move the address of our integer into eax
+    mov     eax, 0100h        ; move the address of our integer into eax
     push    eax             ; push eax to the stack
     mov     eax, esp        ; get the address of the character on the stack
     call    sprintLF        ; call our print function
