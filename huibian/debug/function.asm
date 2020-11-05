@@ -1,4 +1,4 @@
-printInteger:
+;printInteger:
     
 printStr:
     push    eax             ; push eax to the stack
