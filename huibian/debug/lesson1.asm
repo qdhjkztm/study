@@ -1,8 +1,8 @@
 section .data
 section .text
-global main
+global _start
  
-main:
+_start:
  
     mov     rcx, 0          ; rcx is initalised to zero.
  
