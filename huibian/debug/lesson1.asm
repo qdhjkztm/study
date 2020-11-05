@@ -1,8 +1,8 @@
 section .data
 section .text
-global _start
+global main
  
-_start:
+main:
  
     mov     ecx, 0          ; ecx is initalised to zero.
  
