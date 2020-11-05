@@ -1,9 +1,38 @@
-;printInteger:
+printInteger:
+    push    eax             ; preserve eax on the stack to be restored after function runs
+    push    ecx             ; preserve ecx on the stack to be restored after function runs
+    push    edx             ; preserve edx on the stack to be restored after function runs
+    push    esi             ; preserve esi on the stack to be restored after function runs
+    mov     ecx,0
+convertToAssci:
+    inc     ecx
+    mov     edx,0
+    mov     esi,10
+    idiv    esi
+    add     edx,48
+    push    edx
+    cmp     eax,0
+    jnz     convertToAssci
+printLoop:
+    dec     ecx
+    mov     eax,esp
+    call    sprint
+    pop     eax
+    cmp     ecx,0
+    jnz     printLoop
+
+    pop     esi             ; restore esi from the value we pushed onto the stack at the start
+    pop     edx             ; restore edx from the value we pushed onto the stack at the start
+    pop     ecx             ; restore ecx from the value we pushed onto the stack at the start
+    pop     eax             ; restore eax from the value we pushed onto the stack at the start
+    ret
+
+
     
 printStr:
     push    eax             ; push eax to the stack
     mov     eax, esp        ; get the address of the character on the stack
-    call    sprintLF        ; call our print function
+    call    println        ; call our print function
     pop     eax             ; clean up the stack so we don't have unneeded bytes taking up space
     call    quit
 quit:
@@ -50,7 +79,7 @@ sprint:
     pop     edx
     ret
 
-sprintLF:
+println:
     call    sprint
  
     push    eax         ; push eax onto the stack to preserve it while we use the eax register in this function
