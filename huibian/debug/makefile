@@ -5,6 +5,6 @@ RM = rm -f
 $(TARGET):$(OBJ)
 	gcc -g -o $@ $<
 $(OBJ):$(outputFilePath)%.o:%.asm
-	nasm -f elf32 -g $< -o $@
+	nasm -f elf -g $< -o $@
 clean:
 	rm -f $(TARGET) $(outputFilePath)*.o 
