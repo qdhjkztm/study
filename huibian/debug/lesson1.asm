@@ -4,13 +4,8 @@ global main
  
 main:
  
-    mov     ecx, 0          ; ecx is initalised to zero.
  
-nextNumber:
-    inc     ecx             ; increment ecx
- 
-    mov     eax, ecx        ; move the address of our integer into eax
-    add     eax, 48         ; add 48 to our number to convert from integer to ascii for printing
+    mov     eax, 'aaa'        ; move the address of our integer into eax
     push    eax             ; push eax to the stack
     mov     eax, esp        ; get the address of the character on the stack
     call    sprintLF        ; call our print function
