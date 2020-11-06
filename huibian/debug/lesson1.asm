@@ -9,3 +9,5 @@ main:        ; move the address of our integer into eax
 
     mov     eax,100
     call    printInteger
+
+    call    quit
