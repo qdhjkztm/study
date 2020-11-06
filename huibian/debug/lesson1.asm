@@ -9,7 +9,8 @@ main:        ; move the address of our integer into eax
     mov     ecx,2
     mov     eax,4
 loopPrint:
-    add     eax,eax
+    mov     ebx,4
+    mul     ebx
     loop loopPrint
     call    printInteger
     mov     eax,100
