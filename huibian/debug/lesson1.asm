@@ -7,13 +7,11 @@ main:        ; move the address of our integer into eax
     mov     eax,'111'    ; return to our program
     call    printStr
     mov     ecx,2
-loopPrint:
-    push    ecx
     mov     eax,4
+loopPrint:
     mul     eax
-    call    printInteger
-    pop     ecx
     loop loopPrint
+    call    printInteger
     mov     eax,100
     mov     ebx,1000
     sub     ebx,eax
