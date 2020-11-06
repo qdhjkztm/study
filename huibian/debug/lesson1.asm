@@ -6,11 +6,12 @@ global main
 main:        ; move the address of our integer into eax
     mov     eax,'111'    ; return to our program
     call    printStr
-    mov     ecx,10
+    mov     ecx,2
 loopPrint:
     push    ecx
-    mov     eax,"aaa"
-    call    printStr
+    mov     eax,4
+    mul     eax
+    call    printInteger
     pop     ecx
     loop loopPrint
     mov     eax,100
