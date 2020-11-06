@@ -34,7 +34,7 @@ printStr:
     mov     eax, esp        ; get the address of the character on the stack
     call    println        ; call our print function
     pop     eax             ; clean up the stack so we don't have unneeded bytes taking up space
-    call    quit
+    
 quit:
     mov     ebx, 0
     mov     eax, 1
