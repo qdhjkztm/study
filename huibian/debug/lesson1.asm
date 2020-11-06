@@ -8,7 +8,7 @@ main:        ; move the address of our integer into eax
     call    printStr
     mov     cx,10
 loopPrint:
-    mov     eax,"你好"
+    mov     eax,"aaa"
     call    printStr
     loop loopPrint
     mov     eax,100
