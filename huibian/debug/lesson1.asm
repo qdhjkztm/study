@@ -8,8 +8,10 @@ main:        ; move the address of our integer into eax
     call    printStr
     mov     cx,10
 loopPrint:
+    push    cx
     mov     eax,"aaa"
     call    printStr
+    pop     cx
     loop loopPrint
     mov     eax,100
     mov     ebx,1000
