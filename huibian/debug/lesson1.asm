@@ -6,7 +6,11 @@ global main
 main:        ; move the address of our integer into eax
     mov     eax,'111'    ; return to our program
     call    printStr
-
+    mov     cx,10
+loopPrint:
+    mov     eax,"你好"
+    call    printStr
+    loop loopPrint
     mov     eax,100
     mov     ebx,1000
     sub     ebx,eax
